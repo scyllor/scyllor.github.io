@@ -18,7 +18,7 @@ public class MyFreeMarkerView extends FreeMarkerView {
 
 }
 {% endhighlight %}
-{% xml java linenos %}
+{% highlight java linenos %}
 <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
     <property name="viewClass" value="com.scylla.utils.MyFreeMarkerView" /><!-- 自定义FreeMarkerView，用来定义项目的全局路径 -->
 </bean>
