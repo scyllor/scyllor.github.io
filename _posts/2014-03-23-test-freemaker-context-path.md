@@ -15,7 +15,6 @@ public class MyFreeMarkerView extends FreeMarkerView {
 		model.put(CONTEXT_PATH, request.getContextPath());
 		super.exposeHelpers(model, request);
 	}
-
 }
 {% endhighlight %}
 {% highlight java linenos %}
@@ -23,6 +22,6 @@ public class MyFreeMarkerView extends FreeMarkerView {
     <property name="viewClass" value="com.scylla.utils.MyFreeMarkerView" /><!-- 自定义FreeMarkerView，用来定义项目的全局路径 -->
 </bean>
 {% endhighlight %}
-在模板中可以这样${base}。
+在模板中可以这样$\{base\}。
 </p>
 <p>{{page.date|date_to_string}}，转载请注明：{{page.url}}</p>
