@@ -17,11 +17,12 @@ public class MyFreeMarkerView extends FreeMarkerView {
 	}
 }
 {% endhighlight %}
+在模板中可以这样$\{base\}:
 {% highlight java linenos %}
 <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
-    <property name="viewClass" value="com.scylla.utils.MyFreeMarkerView" /><!-- 自定义FreeMarkerView，用来定义项目的全局路径 -->
+    <!-- 自定义FreeMarkerView，用来定义项目的全局路径 -->
+	<property name="viewClass" value="com.scylla.utils.MyFreeMarkerView" />
 </bean>
 {% endhighlight %}
-在模板中可以这样$\{base\}。
 </p>
 <p>{{page.date|date_to_string}}，转载请注明：{{page.url}}</p>
