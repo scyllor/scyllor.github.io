@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: freemaker之context_path设置
 category: 技乃艺之末
 ---

@@ -13,3 +13,12 @@ layout: default
     {% endfor %}
   </ul>
 </div>
+{% if page.tags.size > 0  %}
+<h3>Tags : </h3>
+<p class="tags">
+	{% for tag in page.tags  %}
+	<a href="{{ site.url  }}/tag/{{ tag  }}/">{{ tag  }}</a>
+	{% endfor  %}
+</p>
+{% endif  %}
+{% include disqus_comment.html  %}

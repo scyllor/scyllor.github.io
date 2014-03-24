@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 测试文章目录和标签
 category: 技乃艺之末
 ---
