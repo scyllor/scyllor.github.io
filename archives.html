@@ -16,7 +16,7 @@ $(function(e){
 		console.log('==='+post);
 		poststrs.push(['<li><span>',post.date,'</span>&raquo;<a href="{{baseurl}}',post.url,'">',post.title,'</a></li>'].join(''));
 		console.log(poststrs.join(''));
-		$('#posts').html(poststrs.join(''));
+		$('.posts').html(poststrs.join(''));
 	}
 });
 </script>
