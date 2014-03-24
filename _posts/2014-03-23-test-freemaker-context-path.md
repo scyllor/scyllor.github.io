@@ -25,4 +25,4 @@ public class MyFreeMarkerView extends FreeMarkerView {
 </bean>
 {% endhighlight %}
 </p>
-<p>{{page.date|date_to_string}}，转载请注明：{{page.url}}</p>
+<p>{{page.date|date_to_string}}，转载请注明：{{baseurl}}{{page.url}}</p>
