@@ -1,10 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="zh-cn">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>{{ page.title }}</title>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>{{ page.title }}</title>
+   <meta name="author" content="Tom Preston-Werner" />
+   <link href="http://feeds.feedburner.com/scyllor" rel="alternate" title="Tom Preston-Werner" type="application/atom+xml" />
+
+   <!-- syntax highlighting CSS -->
+   <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+
+   <!-- Homepage CSS -->
+   <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+
+   <!-- Typekit -->
+   <script type="text/javascript" src="http://use.typekit.com/jpd0pfm.js"></script>
+   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-{{content}}
+
+<!-- ClickTale Top part -->
+<script type="text/javascript">
+var WRInitTime=(new Date()).getTime();
+</script>
+<!-- ClickTale end of Top part -->
+
+<div class="site">
+  <div class="title">
+    <a href="/">Scylla</a>
+    <a class="extra" href="/">home</a>
+	<a class="extra" href="/">about me</a>
+  </div>  
+  {{ content }}  
+  <div class="footer">
+    <div class="contact">
+      <p>
+        Ray Liu<br />
+        me@scylla.me<br />
+        <a href="http://github.com/mojombo/jekyll/">Fork Template form Mojombo</a>
+      </p>
+    </div>
+    <div class="contact">
+      <p>
+        <a href="http://github.com/scyllor">github.com/mojombo</a><br />
+        <a href="http://twitter.com/scyllor">twitter.com/mojombo</a><br />
+      </p>
+    </div>
+    <div class="rss">
+      <a href="http://feeds.feedburner.com/scyllor">
+        <img src="/images/rss.png" alt="Subscribe to RSS Feed" />
+      </a>
+    </div>
+  </div>
+</div>
 </body>
 </html>
