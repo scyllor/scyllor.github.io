@@ -1,0 +1,24 @@
+---
+layout: default
+title: Archives
+---
+<script src="/js/jquery.query.js"></script>
+<script>
+$(function(e){
+	var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }',
+    data = JSON.parse(dataStr),
+    curTag = $.query.get("cat"),
+    archieves = data[curTag];
+	var poststrs = new Array();
+	for(var p in archieves){
+		var post = archieves[p];
+		poststrs.push(['<li><span>',post.date,'</span>&raquo;<a href="{{baseurl}}',post.url,'">',post.title,'</a></li>'].join(''));
+		$('#posts').html(poststrs.join(''));
+	}
+});
+</script>
+<div id="home">
+  <h1>posts</h1>
+  <ul class="posts">
+  </ul>
+</div>

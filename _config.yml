@@ -1,3 +1,4 @@
 markdown: rdiscount
 pygments: true
 baseurl: http://www.scylla.me
+permalink: /:year/:month/:day/:title
