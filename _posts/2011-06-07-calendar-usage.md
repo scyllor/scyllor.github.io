@@ -12,7 +12,7 @@ category: 技乃艺之末
 通过以上方法获得的实例，默认都是当前日期。我们可以通过以下代码验证一下：</br>
 
 //此时是2010年8月25日15时18分18秒</br>
-<pre>
+<pre class="prettyprint">
 Calendar cal = Calendar.getInstance();</br>
 System.out.println("DAY_OF_WEEK: "+cal.get(Calendar.DAY_OF_WEEK));</br>
 System.out.println("DAY_OF_MONTH: "+cal.get(Calendar.DAY_OF_MONTH));</br>
@@ -45,7 +45,7 @@ MONTH的表示是从数字0开始，所以月份应该是该数字+1.</p>
 set(int field, int value)</br>
 
 方法三：</br>
-<pre>
+<pre class="prettyprint">
 set(int year, int month, int date)</br>
 set(int year, int month, int date, int hourOfDay, int minute)</br>
 set(int year, int month, int date, int hourOfDay, int minute, int second)</br>
@@ -56,7 +56,7 @@ set(int year, int month, int date, int hourOfDay, int minute, int second)</br>
 add(int field, int amount)</br>
 
 示例代码：</br>
-<pre>
+<pre class="prettyprint">
 Calendar cal = Calendar.getInstance();</br>
 cal.add(Calendar.DATE, 1);</br>
 System.out.println(cal.getTime());</br>
@@ -67,14 +67,14 @@ Thu Aug 26 15:49:03 CST 2010</br>
 以上是将时间向后推，如果要向前推，将第二个参数（amount）改成负数即可。</p>
 
 <p>三． 另外，Calendar还提供几个非常好用的日期比较函数：</br>
-<pre>
+<pre class="prettyprint">
 after(Object when)</br>
 before(Object when)</br>
 equals(Object when)</br>
 compareTo(Calendar anotherCalendar)</br>
 </pre>
 需要注意的是：上面的Object参数类型必须是Calendar的实例(instance)，否则就没有意义了。示例代码：</br>
-<pre>
+<pre class="prettyprint">
 Calendar cal = Calendar.getInstance();</br>
 Calendar cal2 = Calendar.getInstance();</br>
 
